@@ -5,6 +5,7 @@ This is very much a personal project and not a plugin that is not supported in a
 # Installation 
 
 ### Dependencies
+#### LaTex-ORC
 To use this plugin, you need to install the LaTex-ORC, 
 the GitHub of which can be found [here](https://github.com/lukas-blecher/LaTeX-OCR)
 
@@ -13,3 +14,9 @@ LaTex-ORC can also be done by running the following command:
 ```
 pip install pix2tex
 ```
+#### Scrot (SCReenshOT)
+The GitHub of Scrot can be found [here](https://github.com/resurrecting-open-source-projects/scrot)
+
+If you're willing to mess around with the plugin it shouldn't be too challenging to get another similar
+screen capture software to work in it's place if that's your preference.
+
