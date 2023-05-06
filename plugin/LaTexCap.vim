@@ -5,7 +5,8 @@ if exists('g:LaTexCap')
 endif
 let g:LaTexCap = 1
 
-let s:lua_init_loc = expand("<sfile>:h:h") . "/../../lua/LaTexCap/init.lua"
-exe "lua require('" . s:lua_init_loc . "')"
+let s:lua_init_loc = fnamemodify(resolve(expand('<sfile>:p:h') . '/../lua/LaTexCap/init.lua'), ':p')
+exe "lua require('LaTexCap')"
+
 
 command! -nargs=0 LatexCap lua require("LaTexCap").Capture2Tex()
