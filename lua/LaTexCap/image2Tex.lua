@@ -1,5 +1,7 @@
-function LatexCap()
-  -- Get the path of the directory 
+local M = {}
+
+function M.Capture2Tex()
+  -- Get the path of the directory
   local script_path = debug.getinfo(1, 'S').source:sub(2)
   local plugin_dir = vim.fn.fnamemodify(script_path, ':h') .. '/LaTexCap'
 
@@ -15,7 +17,7 @@ function LatexCap()
 
   -- Take the screenshot using scrot
   local takeScreenShot = 'scrot -s ' .. screenshot_path
-  vim.fn.system(takeScreenShot )
+  vim.fn.system(takeScreenShot)
 
   -- Convert the screenshot to LaTeX using pix2tex
   local py_command = 'pix2tex ' .. screenshot_path
@@ -25,5 +27,4 @@ function LatexCap()
   vim.api.nvim_put({latex_code}, 'c', true, true)
 end
 
--- Define the command
-vim.cmd("command! -nargs=0 LatexCap :call v:lua.latexcap()")
+return M
