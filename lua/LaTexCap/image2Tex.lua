@@ -3,7 +3,7 @@ local M = {}
 function M.Capture2Tex()
   -- Get the path of the directory
   local script_path = debug.getinfo(1, 'S').source:sub(2)
-  local plugin_dir = vim.fn.fnamemodify(script_path, ':h') .. '/LaTexCap'
+  local plugin_dir = vim.fn.fnamemodify(script_path, ':h') .. '/screenshot'
 
   -- Create the plugin-specific directory if it doesn't already exist
   if vim.fn.isdirectory(plugin_dir) == 0 then
